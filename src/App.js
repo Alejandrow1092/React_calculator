@@ -80,7 +80,10 @@ function reducer (state, {type, payload}){
         }
     case ACTIONS.CLEAR:
       return {}
+
+    default:;
     }
+    
 }
 
 //funcion que hace todas la operaciones
@@ -107,6 +110,7 @@ const evaluate = ({currentOperand, previousOperand, operation}) =>{
       case "+/-":
         computation = prev + current;
         break;
+      default:;
   }
   
   return computation.toString()
